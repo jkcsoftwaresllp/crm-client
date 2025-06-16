@@ -1,10 +1,10 @@
 import "./App.css";
-import EmailInput from "./components/EmailInput.jsx";
+import EmailInput from "./components/ui/EmailInput";
 function App() {
   return (
     <>
     <EmailInput />
-      <div className="App">CRM</div>
+      
     </>
   );
 }

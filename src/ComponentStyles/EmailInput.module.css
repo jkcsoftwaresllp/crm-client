@@ -1,4 +1,4 @@
-/* EmailInput.module.css */
+
 .emailInputContainer {
   display: flex;
   flex-direction: column;
@@ -72,7 +72,7 @@
   gap: 0.25rem;
 }
 
-/* Responsive design */
+
 @media (max-width: 640px) {
   .emailInput {
     padding: 0.625rem 0.875rem;
@@ -80,13 +80,11 @@
   }
 }
 
-/* Accessibility improvements */
 .emailInput:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
 
-/* Dark mode support (optional) */
 @media (prefers-color-scheme: dark) {
   .emailInputLabel {
     color: #f3f4f6;
