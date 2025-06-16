@@ -11,7 +11,7 @@ Welcome to the **CRM** Project! This guide will walk you through the steps to se
 
   ```bash
   git clone https://github.com/jkcsoftwaresllp/crm-client.git
-  cd CasGamPro_client
+  cd crm-client
   ```
 
   This will clone the whole repository, and you can switch between branches as needed.
@@ -27,7 +27,7 @@ Welcome to the **CRM** Project! This guide will walk you through the steps to se
    If you want to clone multiple specific branches, first clone the `development` branch and then fetch additional branches:
   ```bash
   git clone --single-branch --branch development https://github.com/jkcsoftwaresllp/crm-client.git
-  cd CasGamPro_client
+  cd crm-client
   git fetch origin feature/xyz:feature/xyz
   git fetch origin hotfix/abc:hotfix/abc
   ```
