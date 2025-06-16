@@ -1,0 +1,30 @@
+.selectInputContainer {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #333;
+}
+
+.select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.select:focus {
+  border-color: #0078d4;
+}
+
+.error {
+  color: #d32f2f;
+  font-size: 0.92rem;
+  margin-top: 0.3rem;
+}
