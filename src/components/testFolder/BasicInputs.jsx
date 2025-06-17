@@ -14,18 +14,19 @@ export const BasicInputs = () => {
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-    if (file) {
-      const allowedTypes = ["image/png", "image/jpeg"];
-      if (!allowedTypes.includes(file.type)) {
-        setFileError("Only PNG and JPEG files are allowed.");
-        setSelectedFile(null);
-      } else {
-        setFileError("");
-        setSelectedFile(file);
-      }
+   const allowedTypes = ["image/png", "image/jpeg"];
+
+    if (!file) {
+      setFileError("File is required.");
+      setSelectedFile(null);
+    } else if (!allowedTypes.includes(file.type)) {
+      setFileError("Only PNG and JPEG files are allowed.");
+      setSelectedFile(null);
+    } else {
+      setFileError("");
+      setSelectedFile(file);
     }
   };
-
   return (
     <>
       <EmailInput />
