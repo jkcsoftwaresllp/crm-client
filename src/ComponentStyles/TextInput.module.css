@@ -1,0 +1,41 @@
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #2e2e2e;
+}
+
+.required {
+  color: #d10000;
+  margin-left: 4px;
+}
+
+.input {
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.2s ease-in-out;
+  background-color: #fff;
+}
+
+.input:focus {
+  border-color: #3a7bd5;
+  outline: none;
+}
+
+.inputError {
+  border-color: #e53935;
+  background-color: #fff5f5;
+}
+
+.errorText {
+  color: #e53935;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
