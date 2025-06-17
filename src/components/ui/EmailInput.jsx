@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../ComponentStyles/EmailInput.module.css'
+import styles from '../../ComponentStyles/EmailInput.module.css'
 
 const EmailInput = ({
   label,
