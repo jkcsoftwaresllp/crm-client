@@ -1,12 +1,23 @@
 import "./App.css";
-import { MainTesting } from "./components/testFolder/MainTesting";
+import SelectInput from "./components/ui/SelectInput";
 
 function App() {
   return (
     <>
-      <MainTesting />
+      <SelectInput
+        label="Timezone"
+        name="timezone"
+        value={""}
+        onChange={() => {}}
+        options={[
+          { label: 'UTC', value: 'UTC' },
+          { label: 'IST', value: 'Asia/Kolkata' }
+        ]}
+      />
     </>
   );
 }
 
 export default App;
+
+
