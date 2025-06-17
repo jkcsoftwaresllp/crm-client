@@ -1,16 +1,10 @@
-# Pull Request Template
-
-Thank you for submitting a pull request! Before we proceed with the review, please ensure that you have completed the following steps:
-
 ## Description
 
-Please provide a clear and concise description of the changes included in this pull request. Include any relevant context or links to related issues.
+...
 
 ## Related Issue(s)
 
-If applicable, please link any issues that this PR addresses (e.g., `Closes #123`, `Fixes #456`).
-
-- Issue(s) resolved: [link issues here]
+...
 
 ## Type of Change
 
@@ -25,14 +19,11 @@ Please select the appropriate category for this PR:
 
 ## How to Test
 
-Please provide instructions on how to test the changes in this PR. If this PR requires special setup or steps, please explain them clearly.
+....
 
 ## Screenshots (if applicable)
 
-If your changes include UI modifications, please attach screenshots here:
-
-- Screenshot 1
-- Screenshot 2
+...
 
 ## Checklist
 

@@ -1,15 +1,14 @@
-import React from "react";
-import styles from "../../ComponentStyles/TextInput.module.css"; // adjust path as needed
+import styles from "../css/TextInput.module.css";
 
-const TextInput = ({
+export const TextInput = ({
   label,
   name,
   value,
   onChange,
-  placeholder = "",
+  placeholder = "Start Typing...",
   required = false,
   error = "",
-  type = "text"
+  type = "text",
 }) => {
   return (
     <div className={styles.inputGroup}>
@@ -33,5 +32,3 @@ const TextInput = ({
     </div>
   );
 };
-
-export default TextInput;
