@@ -27,6 +27,7 @@ export const BasicInputs = () => {
       setSelectedFile(file);
     }
   };
+  
   return (
     <>
       <EmailInput />
