@@ -1,26 +1,20 @@
 import React from 'react';
-import styles from '../../ComponentStyles/PhoneInput.module.css';
+import styles from '../css/PhoneInput.module.css';
 
 export default function PhoneInput({
   label = 'Mobile Number',
   name = 'mobile',
+  value = '',
+  onChange,
   placeholder = 'Enter your mobile number',
   required = false,
-  value = '',
-  onChange = () => {},
   error = ''
 }) {
-  const formatPhoneNumber = (val) => {
-    const onlyNums = val.replace(/\D/g, '').slice(0, 10);
-    if (onlyNums.length <= 3) return onlyNums;
-    if (onlyNums.length <= 6) return `${onlyNums.slice(0, 3)}-${onlyNums.slice(3)}`;
-    return `${onlyNums.slice(0, 3)}-${onlyNums.slice(3, 6)}-${onlyNums.slice(6)}`;
-  };
-
-  const handleInput = (e) => {
-    const raw = e.target.value;
-    const formatted = formatPhoneNumber(raw);
-    onChange(formatted); // Pass back formatted value
+  const handleInputChange = (e) => {
+    const onlyNums = e.target.value.replace(/\D/g, '');
+    if (onlyNums.length <= 10) {
+      onChange({ target: { name, value: onlyNums } });
+    }
   };
 
   return (
@@ -31,10 +25,11 @@ export default function PhoneInput({
         id={name}
         name={name}
         value={value}
-        onChange={handleInput}
+        onChange={handleInputChange}
         placeholder={placeholder}
         required={required}
         className={`${styles.input} ${error ? styles.errorInput : ''}`}
+        pattern="\d*"
       />
       {error && <span className={styles.error}>{error}</span>}
     </div>

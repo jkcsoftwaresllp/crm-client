@@ -4,9 +4,9 @@
   margin-bottom: 1rem;
 }
 
-label {
+.inputWrapper label {
+  margin-bottom: 0.5rem;
   font-weight: 500;
-  margin-bottom: 0.25rem;
 }
 
 .input {
@@ -15,7 +15,6 @@ label {
   border-radius: 6px;
   font-size: 1rem;
   outline: none;
-  transition: border-color 0.2s;
 }
 
 .input:focus {
