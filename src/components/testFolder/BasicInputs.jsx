@@ -2,7 +2,7 @@ import EmailInput from "../util/jsx/EmailInput";
 import { PasswordInput } from "../util/jsx/PasswordInput";
 import { TextInput } from "../util/jsx/TextInput";
 import PhoneInput from '../util/jsx/PhoneInput';
-import usePhoneInput from '../util/hooks/usePhoneInput';
+import usePhoneInput from '../util/helper/usePhoneInput';
 
 export const BasicInputs = () => {
    const { phone, error, handleChange } = usePhoneInput();
