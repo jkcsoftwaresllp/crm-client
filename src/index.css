@@ -4,7 +4,7 @@
   --text: 500;
   --borderRadius: 8px;
   --borderRadius-md: 15px;
-  --borderRadius-lg: 22px;
+  --borderRadius-lg: 50px;
   --text-xs: 0.6rem;
   --text-sm: 0.9rem;
   --text-md: 1.2rem;
@@ -93,6 +93,26 @@
   --color-text-header: #ffffff;
   --color-text-secondary-header: #1c1c1c;
   --color-home-hover: var(--color-bg-betPrimary);
+
+  /* === CRM THEME COLORS === */
+  --crm-primary-green: #26775C;
+  --crm-background-white: #FFFFFF;
+
+  /* Accent Colors */
+  --crm-success: #3FA86C;
+  --crm-info: #B4DC7F;
+  --crm-warning: #B3261E;
+  --crm-error: #D32F2F;
+
+  /* Neutral Colors */
+  --crm-text-dark: #1F1F1F;
+  --crm-gray-medium: #7A7A7A;
+  --crm-gray-light: #DCDCDC;
+  --crm-background-gray: #F9F9F9;
+
+  /* UI States & Tints */
+  --crm-hover-green: #1E604D;
+  --crm-tint-green: #E5F3EF;
 }
 
 * {

@@ -2,11 +2,15 @@ import "./App.css";
 import { MainTesting } from "./components/testFolder/MainTesting";
 
 function App() {
+
+  
   return (
     <>
-      <MainTesting />
+    <MainTesting/>
     </>
   );
 }
 
 export default App;
+
+
