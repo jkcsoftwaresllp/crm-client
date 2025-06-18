@@ -1,35 +1,33 @@
-import React from 'react';
+
 import styles from '../css/SubmitButton.module.css';
 
-const SubmitButton = ({ 
-  children, 
+
+export const SubmitButton = ({ 
+  children = "Submit", 
   onClick, 
-  type = "button",
+  disabled = false, 
+  loading = false,
+  type = "submit",
   variant = "primary",
   size = "medium",
-  disabled = false,
-  loading = false,
   fullWidth = false 
 }) => {
-  const buttonClasses = [
-    styles.button,
-    styles[variant],
-    styles[size],
-    fullWidth ? styles.fullWidth : '',
-    disabled || loading ? styles.disabled : ''
-  ].filter(Boolean).join(' ');
-
   return (
     <button
       type={type}
-      className={buttonClasses}
       onClick={onClick}
       disabled={disabled || loading}
+      className={`submit-button ${variant} ${size} ${fullWidth ? 'full-width' : ''} ${loading ? 'loading' : ''} ${disabled ? 'disabled' : ''}`}
     >
-      {loading && <span className={styles.spinner}></span>}
-      <span className={styles.buttonText}>{children}</span>
+      {loading ? (
+        <span className="button-content">
+          <span className="loading-spinner"></span>
+          Loading...
+        </span>
+      ) : (
+        children
+      )}
     </button>
   );
 };
 
-export default SubmitButton;

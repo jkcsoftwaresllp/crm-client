@@ -1,58 +1,46 @@
-import React, { useState } from 'react';
+
 import styles from '../css/SelectDropdown.module.css';
 
-const SelectDropdown = ({ 
+export const SelectDropdown = ({ 
   label, 
   options = [], 
   value, 
   onChange, 
+  error, 
+  name,
   placeholder = "Select an option",
-  error,
-  required = false 
+  required = false,
+  disabled = false 
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleSelect = (option) => {
-    onChange(option);
-    setIsOpen(false);
-  };
-
   return (
-    <div className={styles.selectContainer}>
+    <div className="select-dropdown-container">
       {label && (
-        <label className={styles.label}>
+        <label htmlFor={name} className="input-label">
           {label}
-          {required && <span className={styles.required}>*</span>}
+          {required && <span className="required-asterisk">*</span>}
         </label>
       )}
-      <div className={`${styles.selectWrapper} ${error ? styles.error : ''}`}>
-        <div 
-          className={styles.selectButton}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <span className={value ? styles.selectedValue : styles.placeholder}>
-            {value || placeholder}
-          </span>
-          <span className={`${styles.arrow} ${isOpen ? styles.open : ''}`}>▼</span>
-        </div>
-        {isOpen && (
-          <div className={styles.dropdown}>
-            {options.map((option, index) => (
-              <div
-                key={index}
-                className={styles.option}
-                onClick={() => handleSelect(option)}
-              >
-                {option}
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-      {error && <span className={styles.errorText}>{error}</span>}
+      <select
+        id={name}
+        name={name}
+        value={value}
+        onChange={onChange}
+        className={`select-dropdown ${error ? 'input-error' : ''} ${disabled ? 'input-disabled' : ''}`}
+        disabled={disabled}
+        required={required}
+      >
+        <option value="" disabled>
+          {placeholder}
+        </option>
+        {options.map((option, index) => (
+          <option key={index} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+      {error && <span className="error-message">{error}</span>}
     </div>
   );
 };
 
-export default SelectDropdown;
 

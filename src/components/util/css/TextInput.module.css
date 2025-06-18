@@ -1,41 +1,50 @@
-.inputGroup {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.5rem;
+.textInputContainer {
+  margin-bottom: 1.2rem;
 }
 
-.label {
-  font-weight: 600;
+.inputLabel {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--crm-text-dark);
   margin-bottom: 0.4rem;
-  color: #2e2e2e;
+  font-weight: 600;
 }
 
-.required {
-  color: #d10000;
-  margin-left: 4px;
+.requiredAsterisk {
+  color: var(--crm-error);
+  margin-left: 2px;
 }
 
-.input {
-  padding: 0.6rem 0.75rem;
-  font-size: 0.95rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  transition: border-color 0.2s ease-in-out;
-  background-color: #fff;
-}
-
-.input:focus {
-  border-color: #3a7bd5;
+.textInput {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  font-size: var(--text-md);
+  border: 1.5px solid var(--crm-gray-light);
+  border-radius: var(--borderRadius);
+  background: var(--crm-background-white);
+  color: var(--crm-text-dark);
   outline: none;
+  transition: border 0.2s;
+}
+
+.textInput:focus {
+  border-color: var(--crm-primary-green);
 }
 
 .inputError {
-  border-color: #e53935;
-  background-color: #fff5f5;
+  border-color: var(--crm-error) !important;
+  background: #fff0f0;
 }
 
-.errorText {
-  color: #e53935;
-  font-size: 0.85rem;
-  margin-top: 0.3rem;
+.inputDisabled {
+  background: var(--crm-gray-light);
+  color: var(--crm-gray-medium);
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  color: var(--crm-error);
+  font-size: var(--text-xs);
+  margin-top: 0.2rem;
+  display: block;
 }

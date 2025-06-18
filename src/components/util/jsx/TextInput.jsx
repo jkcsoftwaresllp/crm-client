@@ -1,34 +1,38 @@
-import styles from "../css/TextInput.module.css";
 
-export const TextInput = ({
-  label,
-  name,
-  value,
-  onChange,
-  placeholder = "Start Typing...",
-  required = false,
-  error = "",
+import styles from '../css/TextInput.module.css';
+
+
+export const TextInput = ({ 
+  label, 
+  placeholder, 
+  value, 
+  onChange, 
+  error, 
+  name, 
   type = "text",
+  required = false,
+  disabled = false 
 }) => {
   return (
-    <div className={styles.inputGroup}>
+    <div className="text-input-container">
       {label && (
-        <label htmlFor={name} className={styles.label}>
-          {label} {required && <span className={styles.required}>*</span>}
+        <label htmlFor={name} className="input-label">
+          {label}
+          {required && <span className="required-asterisk">*</span>}
         </label>
       )}
       <input
-        type={type}
         id={name}
         name={name}
+        type={type}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        className={`text-input ${error ? 'input-error' : ''} ${disabled ? 'input-disabled' : ''}`}
+        disabled={disabled}
         required={required}
-        className={`${styles.input} ${error ? styles.inputError : ""}`}
-        autoComplete="off"
       />
-      {error && <p className={styles.errorText}>{error}</p>}
+      {error && <span className="error-message">{error}</span>}
     </div>
   );
 };

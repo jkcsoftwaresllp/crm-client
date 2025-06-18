@@ -1,44 +1,42 @@
-import React from 'react';
+
 import styles from '../css/ErrorBanner.module.css';
 
-const ErrorBanner = ({ 
+
+export const ErrorBanner = ({ 
   message, 
-  type = "error",
-  onClose,
-  closable = true,
+  type = "error", 
+  onClose, 
+  dismissible = true,
   icon = true 
 }) => {
   if (!message) return null;
 
   const getIcon = () => {
     switch (type) {
-      case 'success':
-        return '✓';
-      case 'warning':
-        return '⚠';
-      case 'info':
-        return 'ℹ';
       case 'error':
+        return '❌';
+      case 'warning':
+        return '⚠️';
+      case 'success':
+        return '✅';
+      case 'info':
+        return 'ℹ️';
       default:
-        return '✕';
+        return '❌';
     }
   };
 
   return (
-    <div className={`${styles.banner} ${styles[type]}`}>
-      <div className={styles.content}>
-        {icon && (
-          <span className={styles.icon}>
-            {getIcon()}
-          </span>
-        )}
-        <span className={styles.message}>{message}</span>
+    <div className={`error-banner ${type}`}>
+      <div className="banner-content">
+        {icon && <span className="banner-icon">{getIcon()}</span>}
+        <span className="banner-message">{message}</span>
       </div>
-      {closable && (
+      {dismissible && onClose && (
         <button 
-          className={styles.closeButton}
+          className="banner-close-btn" 
           onClick={onClose}
-          aria-label="Close"
+          type="button"
         >
           ✕
         </button>
@@ -47,4 +45,3 @@ const ErrorBanner = ({
   );
 };
 
-export default ErrorBanner;

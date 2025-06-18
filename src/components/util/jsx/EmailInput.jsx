@@ -1,49 +1,51 @@
-import React from 'react';
-import styles from '../css/EmailInput.module.css'
 
-export const EmailInput = ({
-  label,
-  name,
-  value,
-  onChange,
-  placeholder = "Enter your email address",
-  required = false,
-  error,
-  className = "",
-  ...props
+import styles from '../css/EmailInput.module.css';
+
+export const EmailInput = ({ 
+  label = "Email Address", 
+  placeholder = "Enter your email", 
+  value, 
+  onChange, 
+  error, 
+  name = "email",
+  required = true,
+  disabled = false 
 }) => {
-  const inputId = name || 'email-input';
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleChange = (e) => {
+    const emailValue = e.target.value;
+    onChange(e);
+    
+    // Optional: Real-time validation
+    if (emailValue && !validateEmail(emailValue)) {
+      // You can trigger validation here if needed
+    }
+  };
 
   return (
-    <div className={`${styles.emailInputContainer} ${className}`}>
+    <div className="email-input-container">
       {label && (
-        <label htmlFor={inputId} className={styles.emailInputLabel}>
+        <label htmlFor={name} className="input-label">
           {label}
-          {required && <span className={styles.requiredAsterisk}>*</span>}
+          {required && <span className="required-asterisk">*</span>}
         </label>
       )}
-      
-      <div className={styles.emailInputWrapper}>
-        <input
-          id={inputId}
-          type="email"
-          name={name}
-          value={value}
-          onChange={onChange}
-          placeholder={placeholder}
-          required={required}
-          className={`${styles.emailInput} ${error ? styles.error : ''}`}
-          {...props}
-        />
-      </div>
-      
-      {error && (
-        <div className={styles.emailInputError} role="alert">
-          {error}
-        </div>
-      )}
+      <input
+        id={name}
+        name={name}
+        type="email"
+        value={value}
+        onChange={handleChange}
+        placeholder={placeholder}
+        className={`email-input ${error ? 'input-error' : ''} ${disabled ? 'input-disabled' : ''}`}
+        disabled={disabled}
+        required={required}
+      />
+      {error && <span className="error-message">{error}</span>}
     </div>
   );
 };
-
-export default EmailInput;

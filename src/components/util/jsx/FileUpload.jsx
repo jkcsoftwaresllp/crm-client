@@ -1,22 +1,35 @@
-import React, { useRef, useState } from 'react';
-import styles from '../css/FileUpload.module.css';
 
-const FileUpload = ({ 
-  label, 
-  accept = "*", 
+import styles from '../css/FileUpload.module.css';
+import React, { useRef, useState } from 'react';
+
+export const FileUpload = ({ 
+  label = "Upload Logo", 
+  accept = "image/*",
   onChange, 
-  error,
+  error, 
+  name = "logo",
   required = false,
-  multiple = false 
+  disabled = false,
+  maxSize = 5 * 1024 * 1024, // 5MB default
+  preview = true 
 }) => {
   const fileInputRef = useRef(null);
   const [dragActive, setDragActive] = useState(false);
-  const [files, setFiles] = useState([]);
+  const [previewUrl, setPreviewUrl] = useState(null);
 
-  const handleFiles = (fileList) => {
-    const newFiles = Array.from(fileList);
-    setFiles(newFiles);
-    onChange(newFiles);
+  const handleFileSelect = (file) => {
+    if (file && file.size > maxSize) {
+      onChange({ target: { name, files: null } }, `File size must be less than ${maxSize / (1024 * 1024)}MB`);
+      return;
+    }
+
+    if (preview && file && file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = (e) => setPreviewUrl(e.target.result);
+      reader.readAsDataURL(file);
+    }
+
+    onChange({ target: { name, files: file ? [file] : null } });
   };
 
   const handleDrag = (e) => {
@@ -33,71 +46,67 @@ const FileUpload = ({
     e.preventDefault();
     e.stopPropagation();
     setDragActive(false);
+    
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      handleFiles(e.dataTransfer.files);
+      handleFileSelect(e.dataTransfer.files[0]);
     }
   };
 
-  const handleChange = (e) => {
-    e.preventDefault();
+  const handleInputChange = (e) => {
     if (e.target.files && e.target.files[0]) {
-      handleFiles(e.target.files);
+      handleFileSelect(e.target.files[0]);
     }
   };
 
-  const onButtonClick = () => {
-    fileInputRef.current.click();
+  const handleClick = () => {
+    fileInputRef.current?.click();
   };
 
   return (
-    <div className={styles.fileUploadContainer}>
+    <div className="file-upload-container">
       {label && (
-        <label className={styles.label}>
+        <label className="input-label">
           {label}
-          {required && <span className={styles.required}>*</span>}
+          {required && <span className="required-asterisk">*</span>}
         </label>
       )}
-      <div 
-        className={`${styles.uploadArea} ${dragActive ? styles.dragActive : ''} ${error ? styles.error : ''}`}
+      <div
+        className={`file-upload-area ${dragActive ? 'drag-active' : ''} ${error ? 'input-error' : ''} ${disabled ? 'input-disabled' : ''}`}
         onDragEnter={handleDrag}
         onDragLeave={handleDrag}
         onDragOver={handleDrag}
         onDrop={handleDrop}
-        onClick={onButtonClick}
+        onClick={handleClick}
       >
         <input
           ref={fileInputRef}
           type="file"
-          className={styles.fileInput}
-          multiple={multiple}
           accept={accept}
-          onChange={handleChange}
+          onChange={handleInputChange}
+          className="file-input-hidden"
+          disabled={disabled}
+          required={required}
         />
-        <div className={styles.uploadContent}>
-          <div className={styles.uploadIcon}>📁</div>
-          <p className={styles.uploadText}>
-            <span className={styles.uploadLink}>Click to upload</span> or drag and drop
-          </p>
-          <p className={styles.uploadSubtext}>
-            {accept !== "*" ? `Accepted formats: ${accept}` : "Any file format"}
-          </p>
-        </div>
+        
+        {previewUrl ? (
+          <div className="file-preview">
+            <img src={previewUrl} alt="Preview" className="preview-image" />
+            <p className="file-upload-text">Click to change or drag new file</p>
+          </div>
+        ) : (
+          <div className="file-upload-content">
+            <div className="upload-icon">📁</div>
+            <p className="file-upload-text">
+              Click to upload or drag and drop
+            </p>
+            <p className="file-upload-subtext">
+              {accept.includes('image') ? 'PNG, JPG, GIF up to' : 'Files up to'} {maxSize / (1024 * 1024)}MB
+            </p>
+          </div>
+        )}
       </div>
-      {files.length > 0 && (
-        <div className={styles.fileList}>
-          {files.map((file, index) => (
-            <div key={index} className={styles.fileItem}>
-              <span className={styles.fileName}>{file.name}</span>
-              <span className={styles.fileSize}>
-                {(file.size / 1024).toFixed(1)} KB
-              </span>
-            </div>
-          ))}
-        </div>
-      )}
-      {error && <span className={styles.errorText}>{error}</span>}
+      {error && <span className="error-message">{error}</span>}
     </div>
   );
 };
 
-export default FileUpload;
