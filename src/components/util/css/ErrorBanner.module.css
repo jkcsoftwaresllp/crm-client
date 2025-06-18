@@ -1,0 +1,82 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid;
+  font-size: 0.875rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.icon {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.message {
+  flex: 1;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  margin-left: 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease;
+  font-size: 0.875rem;
+  line-height: 1;
+}
+
+/* Error variant */
+.error {
+  background-color: #fef2f2;
+  border-color: #fecaca;
+  color: #991b1b;
+}
+
+.error .closeButton:hover {
+  background-color: #fecaca;
+}
+
+/* Success variant */
+.success {
+  background-color: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #166534;
+}
+
+.success .closeButton:hover {
+  background-color: #bbf7d0;
+}
+
+/* Warning variant */
+.warning {
+  background-color: #fffbeb;
+  border-color: #fed7aa;
+  color: #92400e;
+}
+
+.warning .closeButton:hover {
+  background-color: #fed7aa;
+}
+
+/* Info variant */
+.info {
+  background-color: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1e40af;
+}
+
+.info .closeButton:hover {
+  background-color: #bfdbfe;
+}

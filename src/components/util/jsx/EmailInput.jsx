@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../css/EmailInput.module.css'
 
-const EmailInput = ({
+export const EmailInput = ({
   label,
   name,
   value,

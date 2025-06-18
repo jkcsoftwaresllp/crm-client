@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import EmailInput from "../util/jsx/EmailInput";
 import { PasswordInput } from "../util/jsx/PasswordInput";
@@ -6,6 +7,7 @@ import PhoneInput from '../util/jsx/PhoneInput';
 import usePhoneInput from '../util/helper/usePhoneInput';
 import SelectInput from "../ui/SelectInput";
 import FileInput from "../util/jsx/FileInput";
+
 
 export const BasicInputs = () => {
    const { phone, error, handleChange } = usePhoneInput();
@@ -30,8 +32,9 @@ export const BasicInputs = () => {
   
   return (
     <>
-      <EmailInput />
+      {/* <EmailInput />
       <PasswordInput />
+<<<<<<< HEAD
       <TextInput />
       <FileInput
         label="Upload Logo"
@@ -58,8 +61,7 @@ export const BasicInputs = () => {
        options={[
          { label: 'UTC', value: 'UTC' },
          { label: 'IST', value: 'Asia/Kolkata' }
-       ]}
-     />
+       ]*/}
     </>
   );
 };
