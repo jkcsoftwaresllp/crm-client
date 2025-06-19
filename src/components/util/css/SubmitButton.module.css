@@ -109,3 +109,13 @@
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+
+
+.small {
+  width: auto;
+  padding: 1rem 1.8rem;
+  font-size: 0.85rem;
+  text-transform: none;
+  margin-bottom: 0;
+}

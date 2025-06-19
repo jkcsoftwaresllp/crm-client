@@ -1,0 +1,54 @@
+/* step3-preferences.module.css */
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--crm-background-white);
+}
+
+.formContainer {
+  flex: 1;
+  padding: 2rem 4rem;
+  border-radius: 40px;
+  margin: 2rem;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--primary-green-dark);
+}
+
+.heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.backBtn,
+.nextBtn {
+  padding: 0.8rem 2rem;
+  border-radius: 40px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.backBtn {
+  background-color: gray;
+  color: white;
+}
+
+.nextBtn {
+  background-color: var(--primary-green);
+  color: white;
+}

@@ -1,0 +1,88 @@
+
+
+.sidebarWrapper {
+  background-color: var(--primary-green);
+  color: var(--text-light);
+  padding: 2rem;
+  width: 280px;
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+
+  min-height: 90vh;
+  align-self: flex-start;
+
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+
+  box-sizing: border-box;
+  border: 2px solid var(--primary-green-dark);
+}
+
+
+
+.title {
+  font-size: var(--text-xl);
+  font-weight: var(--text-bold);
+  margin-bottom: 2rem;
+}
+
+.stepList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.stepItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.stepIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.stepCircle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  font-weight: var(--text-bold);
+  background-color: transparent;
+  color: var(--text-light);
+}
+
+.stepLine {
+  width: 2px;
+  height: 40px;
+  background-color: var(--text-light);
+  margin-top: 4px;
+}
+
+.stepLabel {
+  font-size: var(--text-sm);
+  margin-top: 2px;
+  color: var(--gray-light);
+}
+
+.active .stepCircle {
+  background-color: var(--text-light);
+  color: var(--primary-green);
+}
+
+.active .stepLabel {
+  color: var(--text-light);
+  font-weight: var(--text-bold);
+}
