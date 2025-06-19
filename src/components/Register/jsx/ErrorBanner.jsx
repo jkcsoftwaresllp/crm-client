@@ -1,6 +1,4 @@
-
 import styles from '../css/ErrorBanner.module.css';
-
 
 export const ErrorBanner = ({ 
   message, 
@@ -27,14 +25,14 @@ export const ErrorBanner = ({
   };
 
   return (
-    <div className={`error-banner ${type}`}>
-      <div className="banner-content">
-        {icon && <span className="banner-icon">{getIcon()}</span>}
-        <span className="banner-message">{message}</span>
+    <div className={`${styles.errorBanner} ${styles[type]}`}>
+      <div className={styles.bannerContent}>
+        {icon && <span className={styles.bannerIcon}>{getIcon()}</span>}
+        <span className={styles.bannerMessage}>{message}</span>
       </div>
       {dismissible && onClose && (
         <button 
-          className="banner-close-btn" 
+          className={styles.bannerCloseBtn} 
           onClick={onClose}
           type="button"
         >
@@ -44,4 +42,3 @@ export const ErrorBanner = ({
     </div>
   );
 };
-

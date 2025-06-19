@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../css/FileInput.module.css";
 
-const FileInput = ({
+export const FileInput = ({
   label,
   name,
   onChange,
@@ -51,4 +51,4 @@ const FileInput = ({
   );
 };
 
-export default FileInput;
+

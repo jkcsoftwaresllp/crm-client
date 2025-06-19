@@ -1,6 +1,5 @@
-
 import styles from '../css/PasswordInput.module.css';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export const PasswordInput = ({ 
   label = "Password", 
@@ -20,14 +19,14 @@ export const PasswordInput = ({
   };
 
   return (
-    <div className="password-input-container">
+    <div className={styles.passwordInputContainer}>
       {label && (
-        <label htmlFor={name} className="input-label">
+        <label htmlFor={name} className={styles.inputLabel}>
           {label}
-          {required && <span className="required-asterisk">*</span>}
+          {required && <span className={styles.requiredAsterisk}>*</span>}
         </label>
       )}
-      <div className="password-input-wrapper">
+      <div className={styles.passwordInputWrapper}>
         <input
           id={name}
           name={name}
@@ -35,14 +34,14 @@ export const PasswordInput = ({
           value={value}
           onChange={onChange}
           placeholder={placeholder}
-          className={`password-input ${error ? 'input-error' : ''} ${disabled ? 'input-disabled' : ''}`}
+          className={`${styles.passwordInput} ${error ? styles.inputError : ''} ${disabled ? styles.inputDisabled : ''}`}
           disabled={disabled}
           required={required}
         />
         {showToggle && (
           <button
             type="button"
-            className="password-toggle-btn"
+            className={styles.passwordToggleBtn}
             onClick={togglePasswordVisibility}
             disabled={disabled}
           >
@@ -50,7 +49,7 @@ export const PasswordInput = ({
           </button>
         )}
       </div>
-      {error && <span className="error-message">{error}</span>}
+      {error && <span className={styles.errorMessage}>{error}</span>}
     </div>
   );
 };

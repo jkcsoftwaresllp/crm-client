@@ -1,6 +1,4 @@
-
 import styles from '../css/SubmitButton.module.css';
-
 
 export const SubmitButton = ({ 
   children = "Submit", 
@@ -17,11 +15,11 @@ export const SubmitButton = ({
       type={type}
       onClick={onClick}
       disabled={disabled || loading}
-      className={`submit-button ${variant} ${size} ${fullWidth ? 'full-width' : ''} ${loading ? 'loading' : ''} ${disabled ? 'disabled' : ''}`}
+      className={`${styles.submitButton} ${styles[variant]} ${styles[size]} ${fullWidth ? styles.fullWidth : ''} ${loading ? styles.loading : ''} ${disabled ? styles.disabled : ''}`}
     >
       {loading ? (
-        <span className="button-content">
-          <span className="loading-spinner"></span>
+        <span className={styles.buttonContent}>
+          <span className={styles.loadingSpinner}></span>
           Loading...
         </span>
       ) : (
@@ -30,4 +28,3 @@ export const SubmitButton = ({
     </button>
   );
 };
-

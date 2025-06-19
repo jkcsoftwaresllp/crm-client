@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './SelectInput.module.css';
 
-const SelectInput = ({
+export const SelectInput = ({
   label,
   name,
   value,
@@ -35,4 +35,3 @@ const SelectInput = ({
   </div>
 );
 
-export default SelectInput;

@@ -1,4 +1,3 @@
-
 import styles from '../css/EmailInput.module.css';
 
 export const EmailInput = ({ 
@@ -27,11 +26,11 @@ export const EmailInput = ({
   };
 
   return (
-    <div className="email-input-container">
+    <div className={styles.emailInputContainer}>
       {label && (
-        <label htmlFor={name} className="input-label">
+        <label htmlFor={name} className={styles.inputLabel}>
           {label}
-          {required && <span className="required-asterisk">*</span>}
+          {required && <span className={styles.requiredAsterisk}>*</span>}
         </label>
       )}
       <input
@@ -41,11 +40,11 @@ export const EmailInput = ({
         value={value}
         onChange={handleChange}
         placeholder={placeholder}
-        className={`email-input ${error ? 'input-error' : ''} ${disabled ? 'input-disabled' : ''}`}
+        className={`${styles.emailInput} ${error ? styles.inputError : ''} ${disabled ? styles.inputDisabled : ''}`}
         disabled={disabled}
         required={required}
       />
-      {error && <span className="error-message">{error}</span>}
+      {error && <span className={styles.errorMessage}>{error}</span>}
     </div>
   );
 };

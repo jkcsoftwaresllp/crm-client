@@ -1,6 +1,4 @@
-
 import styles from '../css/TextInput.module.css';
-
 
 export const TextInput = ({ 
   label, 
@@ -14,11 +12,11 @@ export const TextInput = ({
   disabled = false 
 }) => {
   return (
-    <div className="text-input-container">
+    <div className={styles.textInputContainer}>
       {label && (
-        <label htmlFor={name} className="input-label">
+        <label htmlFor={name} className={styles.inputLabel}>
           {label}
-          {required && <span className="required-asterisk">*</span>}
+          {required && <span className={styles.requiredAsterisk}>*</span>}
         </label>
       )}
       <input
@@ -28,11 +26,11 @@ export const TextInput = ({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className={`text-input ${error ? 'input-error' : ''} ${disabled ? 'input-disabled' : ''}`}
+        className={`${styles.textInput} ${error ? styles.inputError : ''} ${disabled ? styles.inputDisabled : ''}`}
         disabled={disabled}
         required={required}
       />
-      {error && <span className="error-message">{error}</span>}
+      {error && <span className={styles.errorMessage}>{error}</span>}
     </div>
   );
 };
