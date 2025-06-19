@@ -1,0 +1,242 @@
+.card {
+  background-color: var(--surface-white);
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  max-width: 28rem;
+  width: 100%;
+  border: 1px solid var(--info-light);
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--border-radius);
+  margin: 0 auto 1.5rem;
+  background-color: var(--info-light);
+}
+
+.icon {
+  font-size: var(--text-xl);
+  color: var(--info);
+}
+
+.title {
+  font-size: var(--text-lg);
+  font-weight: var(--text-bold);
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.statusMessage {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-size: var(--text-sm);
+  font-weight: var(--text);
+  margin-bottom: 1rem;
+  background-color: var(--info-light);
+  color: var(--info);
+}
+
+.description {
+  color: var(--gray-medium);
+  margin-bottom: 1.5rem;
+  line-height: 1.625;
+  font-size: var(--text-sm);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.bgBlue {
+  background-color: var(--info-light);
+}
+
+.borderBlue {
+  border: 2px solid var(--success-dark);
+}
+
+.textBlue {
+  color: var(--text-dark);
+}
+
+.buttonBlue {
+  background: linear-gradient(135deg, rgb(36, 96, 191) 0%, rgb(84, 125, 192) 100%);
+  color: var(--text-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+}
+
+.buttonBlue:hover:not(:disabled) {
+  background: linear-gradient(135deg, rgb(22, 59, 117) 0%, rgb(58, 75, 102) 100%);
+}
+
+.iconBlue {
+  background-color: var(--info-light);
+  color: var(--info);
+}
+
+.bgOrange {
+  background-color: var(--warning-light);
+}
+
+.borderOrange {
+  border: 2px solid var(--success-dark);
+}
+
+.textOrange {
+  color: var(--warning);
+}
+
+.buttonOrange {
+  background: linear-gradient(135deg, var(--warning) 0%, var(--warning-dark) 100%);
+  color: var(--text-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+}
+
+.buttonOrange:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--warning-dark) 0%, var(--warning) 100%);
+}
+
+.iconOrange {
+  background-color: var(--warning-light);
+  color: var(--warning);
+}
+
+.bgGreen {
+  background-color: var(--success-light);
+}
+
+.borderGreen {
+  border: 2px solid var(--success-dark);
+}
+
+.textGreen {
+  color: var(--success);
+}
+
+.buttonGreen {
+  background: linear-gradient(135deg, var(--success) 0%, var(--success-dark) 100%);
+  color: var(--text-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+}
+
+.buttonGreen:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--success-dark) 0%, var(--success) 100%);
+}
+
+.iconGreen {
+  background-color: var(--success-light);
+  color: var(--success);
+}
+
+.bgRed {
+  background-color: var(--error-light);
+}
+
+.borderRed {
+  border: 2px solid var(--success-dark);
+}
+
+.textRed {
+  color: var(--error);
+}
+
+.buttonRed {
+  background: linear-gradient(135deg, var(--error) 0%, var(--error-dark) 100%);
+  color: var(--text-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+}
+
+.buttonRed:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--error-dark) 0%, var(--error) 100%);
+}
+
+.iconRed {
+  background-color: var(--error-light);
+  color: var(--error);
+}
+
+.backButton {
+  background-color: var(--disabled-bg);
+  color: var(--gray-medium);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+}
+
+.backBlue {
+  background-color: var(--info-light);
+}
+
+.backOrange {
+  background-color: var(--warning-light);
+}
+
+.backGreen {
+  background-color: var(--success-light);
+}
+
+.backRed {
+  background-color: var(--error-light);
+}
+
+.backBlue:hover:not(:disabled) {
+  background-color: #bbdefb;
+}
+
+.backOrange:hover:not(:disabled) {
+  background-color: #ffe0b2;
+}
+
+.backGreen:hover:not(:disabled) {
+  background-color: #c8e6c9;
+}
+
+.backRed:hover:not(:disabled) {
+  background-color: #ffcdd2;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  .card {
+    background-color: var(--surface-white);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-color: var(--gray-light);
+  }
+  .title {
+    color: var(--text-light);
+  }
+  .description {
+    color: var(--gray-medium);
+  }
+  .backButton {
+    background-color: var(--disabled-bg);
+    color: var(--disabled-text);
+  }
+  .backButton:hover:not(:disabled) {
+    background-color: var(--text-light);
+  }
+  .statusMessage {
+    background-color: var(--info-light);
+  }
+} */
