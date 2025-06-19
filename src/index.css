@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
   --text-bold: 800;
   --text: 500;
@@ -29,9 +30,9 @@
   --color-lottery-gm2: #3b82f6;
   --color-lottery-gm3: #8b5cf6;
 
-  --color-bg-primary: #f0f0f0; /* Light Gray - soft, neutral, easy on the eyes */
-  --color-bg-secondary: #f9f9f9; /* Light Champagne - warm and inviting without being too bold */
-  --color-bg-tertiary: #d3d3d3; /* Soft Silver - calming and sophisticated, with a touch of elegance */
+  --color-bg-primary: #f0f0f0;
+  --color-bg-secondary: #f9f9f9;
+  --color-bg-tertiary: #d3d3d3;
   --color-bg-header: #343a40;
   --color-bg-hover: #afb5b4;
   --color-bg-trans: #fbfeff97;
@@ -55,6 +56,26 @@
   --color-betSection-bg: #3c444b;
   --color-histroy-bg: #2f3031;
   --color-root-bg: #3a3b3c;
+
+  /* === CRM THEME COLORS === */
+  --crm-primary-green: #26775C;
+  --crm-background-white: #FFFFFF;
+
+  /* Accent Colors */
+  --crm-success: #3FA86C;
+  --crm-info: #B4DC7F;
+  --crm-warning: #B3261E;
+  --crm-error: #D32F2F;
+
+  /* Neutral Colors */
+  --crm-text-dark: #1F1F1F;
+  --crm-gray-medium: #7A7A7A;
+  --crm-gray-light: #DCDCDC;
+  --crm-background-gray: #F9F9F9;
+
+  /* UI States & Tints */
+  --crm-hover-green: #1E604D;
+  --crm-tint-green: #E5F3EF;
 }
 
 [data-theme="dark"] {
@@ -93,26 +114,6 @@
   --color-text-header: #ffffff;
   --color-text-secondary-header: #1c1c1c;
   --color-home-hover: var(--color-bg-betPrimary);
-
-  /* === CRM THEME COLORS === */
-  --crm-primary-green: #26775C;
-  --crm-background-white: #FFFFFF;
-
-  /* Accent Colors */
-  --crm-success: #3FA86C;
-  --crm-info: #B4DC7F;
-  --crm-warning: #B3261E;
-  --crm-error: #D32F2F;
-
-  /* Neutral Colors */
-  --crm-text-dark: #1F1F1F;
-  --crm-gray-medium: #7A7A7A;
-  --crm-gray-light: #DCDCDC;
-  --crm-background-gray: #F9F9F9;
-
-  /* UI States & Tints */
-  --crm-hover-green: #1E604D;
-  --crm-tint-green: #E5F3EF;
 }
 
 * {

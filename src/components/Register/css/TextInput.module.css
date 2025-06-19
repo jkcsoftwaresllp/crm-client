@@ -1,0 +1,99 @@
+.textInputContainer {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.inputLabel {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--crm-text-dark);
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.requiredAsterisk {
+  color: var(--crm-error);
+  margin-left: 4px;
+  font-weight: 700;
+}
+
+.textInput {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: var(--text-md);
+  border: 2px solid var(--crm-gray-light);
+  border-radius: var(--borderRadius-md);
+  background: var(--crm-background-white);
+  color: var(--crm-text-dark);
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.textInput:focus {
+  border-color: var(--crm-primary-green);
+  box-shadow: 0 0 0 4px var(--crm-tint-green), 0 4px 12px rgba(38, 119, 92, 0.15);
+  transform: translateY(-1px);
+}
+
+.textInput:hover:not(:focus):not(:disabled) {
+  border-color: var(--crm-hover-green);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.textInput::placeholder {
+  color: var(--crm-gray-medium);
+  font-style: italic;
+  transition: opacity 0.2s ease;
+}
+
+.textInput:focus::placeholder {
+  opacity: 0.7;
+}
+
+.inputError {
+  border-color: var(--crm-error) !important;
+  background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+  box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.15), 0 4px 12px rgba(211, 47, 47, 0.1);
+  animation: shake 0.3s ease-in-out;
+}
+
+.inputDisabled {
+  background: linear-gradient(135deg, var(--crm-background-gray) 0%, #f0f0f0 100%);
+  color: var(--crm-gray-medium);
+  cursor: not-allowed;
+  border-color: var(--crm-gray-light);
+  opacity: 0.7;
+  box-shadow: none;
+}
+
+.errorMessage {
+  color: var(--crm-error);
+  font-size: var(--text-xs);
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  animation: slideDown 0.3s ease-out;
+}
+
+.errorMessage::before {
+  content: "⚠️";
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
