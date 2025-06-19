@@ -1,119 +1,96 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --text-bold: 800;
-  --text: 500;
-  --borderRadius: 8px;
-  --borderRadius-md: 15px;
-  --borderRadius-lg: 50px;
-  --text-xs: 0.6rem;
-  --text-sm: 0.9rem;
-  --text-md: 1.2rem;
-  --text-lg: 1.5rem;
-  --text-xl: 2rem;
-  --header-height: 50px;
-  --header-gap: 20px;
-  --maximum-responsive-width: 2000px;
-  --color-special-gold: #daa520;
-  --color-special-yellow: #ffe600;
-  --color-special-green: #32e332;
-  --color-special-red: #c01919;
-  --color-special-black: #2b2b2b;
-  --color-special-white: #fefbf3;
-  --color-special-hover: #212121;
-  --color-highlighter-primary: #333;
-  --color-highlighter-secondary: #cd7f32;
-  --color-rotate-primary: rgb(28, 178, 224);
-  --color-link: #2298e7;
 
-  --color-lottery-gm1: #10b981;
-  --color-lottery-gm2: #3b82f6;
-  --color-lottery-gm3: #8b5cf6;
+  /* === Typography === */
+  --text-bold: 800; /* For headings or emphasized text */
+  --text: 500; /* Normal font weight */
+  --text-xs: 0.6rem; /* Extra small text (e.g., captions) */
+  --text-sm: 0.9rem; /* Small text (e.g., labels) */
+  --text-md: 1.2rem; /* Medium text (e.g., paragraphs) */
+  --text-lg: 1.5rem; /* Large text (e.g., section titles) */
+  --text-xl: 2rem; /* Extra large text (e.g., page headers) */
 
-  --color-bg-primary: #f0f0f0;
-  --color-bg-secondary: #f9f9f9;
-  --color-bg-tertiary: #d3d3d3;
-  --color-bg-header: #343a40;
-  --color-bg-hover: #afb5b4;
-  --color-bg-trans: #fbfeff97;
-  --color-bg-primary-a: #fbfeffb6;
-  --color-border-gold: #b8860b;
-  --color-header: #add8e6;
-  --color-text-primary: #2b2b2b;
-  --color-bg-betPrimary: #878787;
-  --color-text-secondary: #4a4a4a;
-  --color-text-tertiary: #7d7d7d;
-  --color-text-secondary-header: #4a4a4a;
-  --color-text-placeholder: #a0a0a0;
-  --color-border-secondary: #5be3d8;
-  --color-hover-primary: #68fd88;
-  --color-text-header: #ffffff;
-  --color-betIn-pair: #d1d80982;
-  --color-betIn-rectangle: #8b00008c;
-  --color-betIn-circle: rgb(0, 140, 12);
-  --color-gameInterface-bg: #24243e;
-  --color-betSectionteen-bg: rgb(86 68 55);
-  --color-betSection-bg: #3c444b;
-  --color-histroy-bg: #2f3031;
-  --color-root-bg: #3a3b3c;
+  /* === Border Radius === */
+  --border-radius: 8px; /* Default border radius for buttons/cards */
+  --border-radius-md: 15px; /* Medium curve (e.g., modals, big cards) */
+  --border-radius-lg: 50px; /* Fully rounded (e.g., pill buttons, avatars) */
 
-  /* === CRM THEME COLORS === */
-  --crm-primary-green: #26775C;
-  --crm-background-white: #FFFFFF;
+  /* === Layout === */
+  --header-height: 50px; /* Fixed height for top navigation bar */
+  --header-gap: 20px; /* Gap between header items */
+  --maximum-responsive-width: 2000px; /* Max container width for large screens */
 
-  /* Accent Colors */
-  --crm-success: #3FA86C;
-  --crm-info: #B4DC7F;
-  --crm-warning: #B3261E;
-  --crm-error: #D32F2F;
+  /* === Primary Theme Colors === */
+  --primary-green: #26775c; /* Main brand color (buttons, links) */
+  --primary-green-light: #4da488; /* Hover background or soft accent */
+  --primary-green-dark: #1d5a48; /* Active/focus state of primary color */
 
-  /* Neutral Colors */
-  --crm-text-dark: #1F1F1F;
-  --crm-gray-medium: #7A7A7A;
-  --crm-gray-light: #DCDCDC;
-  --crm-background-gray: #F9F9F9;
+  --background-white: #ffffff; /* Page background color */
+  --surface-white: #fefefe; /* Card or modal background */
 
-  /* UI States & Tints */
-  --crm-hover-green: #1E604D;
-  --crm-tint-green: #E5F3EF;
+  /* === Accent / Semantic Colors === */
+  --success: #3fa86c; /* Success messages, status badges */
+  --success-light: #dcfce7; /* Background of success alerts */
+  --success-dark: #15803d; /* Borders or icons for success */
+
+  --info: #b4dc7f; /* Info banners, tags */
+  --info-light: #e0f2fe; /* Background of info elements */
+  --info-dark: #7ba740; /* Icons or emphasized info */
+
+  --warning: #b3261e; /* Warning alerts or labels */
+  --warning-light: #fef3c7; /* Background of warning elements */
+  --warning-dark: #991b1b; /* Warning text or borders */
+
+  --error: #d32f2f; /* Errors, danger buttons */
+  --error-light: #fee2e2; /* Error alert backgrounds */
+  --error-dark: #b91c1c; /* Error text or emphasis */
+
+  /* === Neutral Colors === */
+  --text-dark: #1f1f1f; /* Primary text color */
+  --text-light: #ffffff; /* Light text (on dark backgrounds) */
+  --gray-medium: #7a7a7a; /* Secondary text or muted icons */
+  --gray-light: #dcdcdc; /* Input borders, dividers */
+  --background-gray: #f9f9f9; /* Background for sections/cards */
+  --border-color: #e5e7eb; /* Default border color */
+
+  /* === UI States & Tints === */
+  --hover-green: #1e604d; /* Hover state for primary buttons */
+  --tint-green: #e5f3ef; /* Subtle green backgrounds (e.g., cards) */
+  --disabled-bg: #f3f3f3; /* Disabled input/button background */
+  --disabled-text: #9e9e9e; /* Disabled text color */
 }
 
 [data-theme="dark"] {
-  animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  --color-special-gold: #b8860b;
-  --color-special-green: #228b22;
-  --color-special-red: #eb3a3a;
-  --color-special-black: #1b1b1b;
-  --color-special-white: #dcdcdc;
-  --color-special-hover: #fbfeff;
-  --color-red-hover: #8b0000;
-  --color-highlighter-primary: #8b4513;
-  --color-highlighter-secondary: #a0522d;
-  --color-rotate-primary: #1a1a1a;
-  --color-hover-primary: #68fd88;
-  --color-bg-header: #1c1c1c;
-  --color-bg-primary: #121212;
-  --color-bg-secondary: #1c1c1c;
-  --color-gameInterface-bg: #1c1c1c;
-  --color-betSection-bg: #1c1c1c;
-  --color-histroy-bg: #1c1c1c;
-  --color-betSectionteen-bg: #1c1c1c;
-  --color-bg-tertiary: #3a3a3a;
-  --color-betIn-pair: #3a3a3a;
-  --color-betIn-rectangle: #333;
-  --color-betIn-circle: #333;
-  --color-bg-hover: #1a1a1a;
-  --color-bg-trans: #1a1a1a76;
-  --color-bg-primary-a: #212121b6;
-  --color-text-placeholder: #333;
-  --color-text-hover: #fff;
-  --color-header: #3a61a2;
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #c0c0c0;
-  --color-text-tertiary: #8a8a8a;
-  --color-text-header: #ffffff;
-  --color-text-secondary-header: #1c1c1c;
-  --color-home-hover: var(--color-bg-betPrimary);
+  /* === Backgrounds === */
+  --background-white: #121212; /* Dark page background */
+  --surface-white: #1e1e1e; /* Dark surface (cards/modals) */
+
+  /* === Primary Theme Colors (unchanged or darkened if needed) */
+  --primary-green: #26775c;
+  --primary-green-light: #4da488;
+  --primary-green-dark: #1d5a48;
+
+  /* === Text === */
+  --text-dark: #ffffff; /* Light text on dark background */
+  --text-light: #e0e0e0; /* Subtle light text */
+  --gray-medium: #b0b0b0; /* Muted gray for inputs/text */
+  --gray-light: #2a2a2a; /* Light divider for dark theme */
+
+  /* === Borders & Dividers === */
+  --border-color: #333333; /* Borders on dark surfaces */
+
+  /* === Semantic Colors (lightened where needed for contrast) */
+  --success-light: #2e7d32; /* Dark-mode friendly success bg */
+  --info-light: #8bc34a;
+  --warning-light: #ef9a9a;
+  --error-light: #ef5350;
+
+  /* === UI States & Tints === */
+  --hover-green: #144434; /* Hovered primary on dark */
+  --tint-green: #1c2e2a; /* Subtle background tint */
+  --disabled-bg: #2d2d2d; /* Disabled UI bg in dark mode */
+  --disabled-text: #777777; /* Disabled UI text in dark mode */
 }
 
 * {
@@ -136,10 +113,10 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-text-secondary);
+  background-color: var(--info);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--color-bg-tertiary);
+  background-color: var(--background-white);
 }
