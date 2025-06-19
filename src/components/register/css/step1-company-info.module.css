@@ -40,11 +40,11 @@
 
 .buttonGroup {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; 
   margin-top: 2rem;
+  gap: 1rem; 
 }
 
-.backBtn,
 .nextBtn {
   padding: 0.8rem 2rem;
   border-radius: var(--border-radius-lg);
@@ -54,10 +54,7 @@
   font-size: var(--text-md);
 }
 
-.backBtn {
-  background-color: var(--gray-medium);
-  color: var(--text-light);
-}
+
 
 .nextBtn {
   background-color: var(--primary-green);
@@ -70,3 +67,7 @@
   margin-bottom: 2rem;
   color: var(--text-dark);
 }
+
+
+
+

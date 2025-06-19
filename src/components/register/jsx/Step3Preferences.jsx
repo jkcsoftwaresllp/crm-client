@@ -4,6 +4,8 @@ import { SidebarSteps } from "./SidebarSteps";
 import { useNavigate } from "react-router-dom";
 import { SelectDropdown } from "../../util/jsx/SelectDropdown";
 import { FileUpload } from "../../util/jsx/FileUpload";
+import { SubmitButton } from "../../util/jsx/SubmitButton";
+
 
 export const Step3Preferences = ({ formData, setFormData }) => {
   const navigate = useNavigate();
@@ -60,12 +62,19 @@ export const Step3Preferences = ({ formData, setFormData }) => {
         />
 
         <div className={styles.buttonGroup}>
-          <button type="button" className={styles.backBtn} onClick={handleBack}>
+          <SubmitButton
+            type="button"
+            variant="secondary"
+            size="small"
+            onClick={handleBack}
+          >
             Back
-          </button>
-          <button type="submit" className={styles.nextBtn}>
+          </SubmitButton>
+          <SubmitButton 
+            type="submit" 
+            size="small">
             Next
-          </button>
+          </SubmitButton>
         </div>
       </form>
     </div>

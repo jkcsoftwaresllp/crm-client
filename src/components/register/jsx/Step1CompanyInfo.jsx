@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../css/step1-company-info.module.css";
-import { SidebarSteps } from "./SidebarSteps"; 
-
+import { SidebarSteps } from "./SidebarSteps";
+import { SubmitButton } from "../../util/jsx/SubmitButton";
 import { useNavigate } from "react-router-dom";
 import { TextInput } from "../../util/jsx/TextInput";
 
@@ -42,12 +42,13 @@ export const Step1CompanyInfo = ({ formData, setFormData }) => {
         />
 
         <div className={styles.buttonGroup}>
-          <button type="button" className={styles.backBtn} disabled>
-            Back
-          </button>
-          <button type="submit" className={styles.nextBtn}>
+
+          <SubmitButton
+            type="submit"
+            size="small"
+          >
             Next
-          </button>
+          </SubmitButton>
         </div>
       </form>
     </div>

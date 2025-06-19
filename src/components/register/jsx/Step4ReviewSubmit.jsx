@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import styles from "../css/step4-review-submit.module.css";
-import { SidebarSteps } from "./SidebarSteps"; 
+import { SidebarSteps } from "./SidebarSteps";
 import { useNavigate } from "react-router-dom";
+import { SubmitButton } from "../../util/jsx/SubmitButton";
+import { ReviewRow } from "../../util/jsx/ReviewRow";
+
 
 export const Step4ReviewSubmit = ({ formData }) => {
   const [submitted, setSubmitted] = useState(false);
@@ -24,15 +27,17 @@ export const Step4ReviewSubmit = ({ formData }) => {
         <h2 className={styles.heading}>Review & Submit</h2>
 
         <div className={styles.reviewSection}>
-          <p><strong>Company Name:</strong> {formData.companyName}</p>
-          <p><strong>Subdomain:</strong> {formData.subdomain}</p>
-          <p><strong>Admin Email:</strong> {formData.adminEmail}</p>
-          <p><strong>Job Title:</strong> {formData.jobTitle}</p>
+          <ReviewRow label="Company Name" value={formData.companyName} />
+          <ReviewRow label="Subdomain" value={formData.subdomain} />
+          <ReviewRow label="Admin Email" value={formData.adminEmail} />
+          <ReviewRow label="Job Title" value={formData.jobTitle} />
+
           <div className={styles.passwordLine}>
             <strong>Password:</strong>
             <span>{formData.adminPassword ? "********" : "Not provided"}</span>
           </div>
-          <p><strong>Timezone:</strong> {formData.timezone}</p>
+
+          <ReviewRow label="Timezone" value={formData.timezone} />
 
           {formData.logoFile && (
             <div className={styles.logoPreview}>
@@ -46,18 +51,27 @@ export const Step4ReviewSubmit = ({ formData }) => {
           )}
         </div>
 
+
         <div className={styles.buttonGroup}>
-          <button type="button" className={styles.backBtn} onClick={handleBack}>
+          <SubmitButton
+            type="button"
+            variant="secondary"
+            size="small"
+            onClick={handleBack}
+          >
             Back
-          </button>
-          <button type="submit" className={styles.manualSubmitBtn}>
+          </SubmitButton>
+          <SubmitButton
+            type="submit"
+            size="small"
+          >
             Submit
-          </button>
+          </SubmitButton>
         </div>
 
         {submitted && (
           <div className={styles.successBanner}>
-            ✅ Company Registered Successfully!
+            Company Registered Successfully!
           </div>
         )}
       </form>

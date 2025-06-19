@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { EmailInput } from "../../util/jsx/EmailInput";
 import { PasswordInput } from "../../util/jsx/PasswordInput";
 import { TextInput } from "../../util/jsx/TextInput";
+import { SubmitButton } from "../../util/jsx/SubmitButton";
+
 
 export const Step2AdminInfo = ({ formData, setFormData }) => {
   const navigate = useNavigate();
@@ -58,12 +60,19 @@ export const Step2AdminInfo = ({ formData, setFormData }) => {
         />
 
         <div className={styles.buttonGroup}>
-          <button type="button" className={styles.backBtn} onClick={handleBack}>
+       <SubmitButton
+            type="button"
+            variant="secondary"
+            size="small"
+            onClick={handleBack}
+          >
             Back
-          </button>
-          <button type="submit" className={styles.nextBtn}>
+          </SubmitButton>
+          <SubmitButton 
+          type="submit" 
+          size="small">
             Next
-          </button>
+          </SubmitButton>
         </div>
       </form>
     </div>
