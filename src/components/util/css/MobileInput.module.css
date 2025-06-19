@@ -1,0 +1,70 @@
+.mobileContainer {
+  background-color: var(--surface-white);
+  padding: 2rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 420px;
+  gap: 1.2rem;
+}
+
+.title {
+  font-size: var(--text-lg);
+  font-weight: var(--text-bold);
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.subtitle {
+  font-size: var(--text-sm);
+  color: var(--gray-medium);
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputRow {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.select {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid var(--gray-light);
+  border-radius: var(--border-radius);
+  background-color: var(--background-white);
+  color: var(--text-dark);
+}
+
+.input {
+  flex: 2;
+  padding: 0.6rem;
+  border: 1px solid var(--gray-light);
+  border-radius: var(--border-radius);
+  background-color: var(--background-white);
+  color: var(--text-dark);
+}
+
+.checkboxWrapper {
+  font-size: var(--text-xs);
+  color: var(--gray-medium);
+  display: flex;
+  gap: 0.4rem;
+  align-items: flex-start;
+}
+
+.checkboxWrapper input {
+  margin-top: 0.2rem;
+}
+
+.link {
+  color: var(--primary-green);
+  text-decoration: underline;
+}
