@@ -1,14 +1,12 @@
-@import '../../../index.css';
-
 .submitButton {
   width: 100%;
   padding: 1.125rem 2rem;
   font-size: var(--text-md);
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--crm-primary-green) 0%, var(--crm-hover-green) 100%);
-  color: var(--crm-background-white);
+  font-weight: var(--text-bold);
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+  color: var(--text-light);
   border: none;
-  border-radius: var(--borderRadius-md);
+  border-radius: var(--border-radius-md);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 12px rgba(38, 119, 92, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -32,7 +30,7 @@
 }
 
 .submitButton:hover:not(:disabled) {
-  background: linear-gradient(135deg, var(--crm-hover-green) 0%, #1a5a47 100%);
+  background: linear-gradient(135deg, var(--hover-green) 0%, var(--primary-green-dark) 100%);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(38, 119, 92, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -47,20 +45,20 @@
 }
 
 .primary {
-  background: linear-gradient(135deg, var(--crm-primary-green) 0%, var(--crm-hover-green) 100%);
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
 }
 
 .secondary {
-  background: linear-gradient(135deg, var(--crm-background-white) 0%, #f8f9fa 100%);
-  color: var(--crm-primary-green);
-  border: 2px solid var(--crm-primary-green);
+  background: var(--background-white);
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
   box-shadow: 0 2px 8px rgba(38, 119, 92, 0.1);
 }
 
 .secondary:hover:not(:disabled) {
-  background: linear-gradient(135deg, var(--crm-tint-green) 0%, #e0f2ed 100%);
-  border-color: var(--crm-hover-green);
-  color: var(--crm-hover-green);
+  background: var(--tint-green);
+  border-color: var(--hover-green);
+  color: var(--hover-green);
 }
 
 .medium {
@@ -78,8 +76,8 @@
 }
 
 .disabled {
-  background: linear-gradient(135deg, var(--crm-gray-light) 0%, #e0e0e0 100%) !important;
-  color: var(--crm-gray-medium) !important;
+  background: var(--disabled-bg) !important;
+  color: var(--disabled-text) !important;
   cursor: not-allowed !important;
   transform: none !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
