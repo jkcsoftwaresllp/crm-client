@@ -1,12 +1,12 @@
 import "../../index.css";
 import { useState } from "react";
-import { EmailInput } from '../Register/jsx/EmailInput'
-import { PasswordInput } from "../Register/jsx/PasswordInput";
-import { TextInput } from "../Register/jsx/TextInput";
-import { ErrorBanner } from "../Register/jsx/ErrorBanner";
-import { FileUpload } from "../Register/jsx/FileUpload";
-import { SubmitButton } from "../Register/jsx/SubmitButton";
-import { SelectDropdown } from "../Register/jsx/SelectDropdown";
+import { EmailInput } from '../util/jsx/EmailInput'
+import { PasswordInput } from "../util/jsx/PasswordInput";
+import { TextInput } from "../util/jsx/TextInput";
+import { ErrorBanner } from "../util/jsx/ErrorBanner";
+import { FileUpload } from "../util/jsx/FileUpload";
+import { SubmitButton } from "../util/jsx/SubmitButton";
+import { SelectDropdown } from "../util/jsx/SelectDropdown";
 //import PhoneInput from '../util/jsx/PhoneInput';
 //import  usePhoneInput from '../util/helper/usePhoneInput';
 //import { SelectInput }from "../ui/SelectInput";

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './SelectInput.module.css';
+import styles from '../css/SelectInput.module.css';
 
 export const SelectInput = ({
   label,
