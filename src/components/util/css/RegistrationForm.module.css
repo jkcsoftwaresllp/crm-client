@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--background-gray);
+}
+
+.card {
+  background-color: var(--surface-white);
+  padding: 2rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  max-width: 400px;
+  width: 100%;
+}
+.success {
+  text-align: center;
+  padding: 1rem;
+  font-size: var(--text-md);
+  color: var(--primary-green);
+}
+

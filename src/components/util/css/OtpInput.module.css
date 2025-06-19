@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface-white);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  align-items: center;
+  gap: 1rem;
+}
+
+.title {
+  font-weight: var(--text-bold);
+  font-size: var(--text-lg);
+}
+
+.subtitle {
+  font-size: var(--text-sm);
+  text-align: center;
+}
+
+.otpBoxes {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.otpInput {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: var(--text-md);
+  text-align: center;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.resend {
+  font-size: var(--text-xs);
+  color: var(--gray-medium);
+}
+
+.resendLink {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--primary-green);
+  cursor: pointer;
+}
