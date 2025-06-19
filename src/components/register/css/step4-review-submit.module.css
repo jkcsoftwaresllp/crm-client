@@ -1,0 +1,123 @@
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--background-white);
+}
+
+.formContainer {
+  flex: 1;
+  padding: 2rem 4rem;
+  margin: 2rem;
+  border-radius: var(--border-radius-lg);
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--primary-green-dark);
+}
+
+.heading {
+  font-size: var(--text-xl);
+  font-weight: var(--text-bold);
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
+
+.reviewSection {
+  padding: 1.5rem;
+  background-color: var(--tint-green);
+  border-radius: var(--border-radius);
+  font-size: var(--text-md);
+  line-height: 2rem;
+  color: var(--text-dark);
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.backBtn {
+  padding: 0.8rem 2rem;
+  border-radius: var(--border-radius-lg);
+  border: none;
+  background-color: #888;
+  color: white;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.backBtn:hover {
+  background-color: #666;
+}
+
+.manualSubmitBtn {
+  padding: 0.8rem 2.5rem;
+  border-radius: var(--border-radius-lg);
+  border: none;
+  background-color: var(--primary-green);
+  color: white;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.manualSubmitBtn:hover {
+  background-color: var(--hover-green);
+}
+
+.manualSubmitBtn:disabled {
+  background-color: var(--disabled-bg);
+  color: var(--disabled-text);
+  cursor: not-allowed;
+}
+
+.successBanner {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: var(--success-light);
+  color: var(--success-dark);
+  font-weight: 600;
+  border-radius: var(--border-radius-md);
+  text-align: center;
+}
+
+.passwordLine {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  gap: 0.5rem;
+}
+
+.eyeBtn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--primary-green-dark);
+  padding: 0;
+}
+
+.logoPreview {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoImage {
+  margin-top: 1rem;
+  width: 150px;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--gray-light);
+  object-fit: contain;
+  background-color: var(--surface-white);
+  padding: 0.25rem;
+}

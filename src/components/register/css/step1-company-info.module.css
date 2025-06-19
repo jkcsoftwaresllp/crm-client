@@ -1,0 +1,72 @@
+
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--background-white);
+  width: 100%;
+  
+}
+
+.formContainer {
+  flex: 1;
+  padding: 2rem 4rem;
+  border-radius: var(--border-radius-lg);
+  margin: 2rem;
+  background-color: var(--surface-white);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--primary-green-dark);
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  font-weight: var(--text);
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.inputGroup input {
+  padding: 0.9rem 1.2rem;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--gray-light);
+  background-color: var(--disabled-bg);
+  color: var(--text-dark);
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.backBtn,
+.nextBtn {
+  padding: 0.8rem 2rem;
+  border-radius: var(--border-radius-lg);
+  border: none;
+  font-weight: var(--text);
+  cursor: pointer;
+  font-size: var(--text-md);
+}
+
+.backBtn {
+  background-color: var(--gray-medium);
+  color: var(--text-light);
+}
+
+.nextBtn {
+  background-color: var(--primary-green);
+  color: var(--text-light);
+}
+
+.heading {
+  font-size: var(--text-xl);
+  font-weight: var(--text-bold);
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
