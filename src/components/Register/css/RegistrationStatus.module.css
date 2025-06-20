@@ -1,0 +1,23 @@
+.container {
+  min-height: 100vh;
+  background-color: var(--background-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.loading {
+  font-size: var(--text-md);
+  color: var(--text-dark);
+  text-align: center;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  .container {
+    background-color: var(--background-white);
+  }
+  .loading {
+    color: var(--text-light);
+  }
+} */

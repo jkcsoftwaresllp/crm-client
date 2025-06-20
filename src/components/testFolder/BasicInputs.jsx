@@ -7,6 +7,7 @@ import { ErrorBanner } from "../util/jsx/ErrorBanner";
 import { FileUpload } from "../util/jsx/FileUpload";
 import { SubmitButton } from "../util/jsx/SubmitButton";
 import { SelectDropdown } from "../util/jsx/SelectDropdown";
+import { RegistrationStatus } from "../Register/jsx/RegistrationStatus";
 //import PhoneInput from '../util/jsx/PhoneInput';
 //import  usePhoneInput from '../util/helper/usePhoneInput';
 //import { SelectInput }from "../ui/SelectInput";
@@ -41,7 +42,9 @@ export const BasicInputs = () => {
        <ErrorBanner />
       <SubmitButton /> 
       <SelectDropdown /> 
-        <FileUpload /> 
+        <FileUpload />
+        <RegistrationStatus />
     </>
   );
 };
+

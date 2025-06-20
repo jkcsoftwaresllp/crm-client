@@ -1,0 +1,97 @@
+.container {
+  margin-top: 1rem;
+  background-color: var(--surface-white);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  border: 1px solid var(--info-light);
+  max-width: 28rem;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blue {
+  border-color: var(--success-dark);
+  background-color: var(--info-light);
+}
+
+.orange {
+  border-color: var(--success-dark);
+  background-color: var(--warning-light);
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.icon {
+  font-size: var(--text-xl);
+  margin-top: 0.125rem;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  background-color: var(--info-light);
+}
+
+.iconBlue {
+  color: var(--success-dark);
+}
+
+.iconOrange {
+  color: var(--warning);
+  background-color: var(--warning-light);
+}
+
+.title {
+  font-size: var(--text-lg);
+  font-weight: var(--text-bold);
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.textBlue {
+  color: var(--text-dark);
+}
+
+.textOrange {
+  color: var(--warning);
+}
+
+.description {
+  font-size: var(--text-sm);
+  color: var(--gray-medium);
+  line-height: 1.625;
+}
+
+.statusMessage {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-size: var(--text-sm);
+  font-weight: var(--text);
+  margin-bottom: 1rem;
+  background-color: var(--info-light);
+  color: var(--info);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  .container {
+    background-color: var(--surface-white);
+    border-color: var(--gray-light);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  .title {
+    color: var(--text-light);
+  }
+  .description {
+    color: var(--gray-medium);
+  }
+  .statusMessage {
+    background-color: var(--info-light);
+  }
+} */
