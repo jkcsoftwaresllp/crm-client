@@ -5,6 +5,8 @@ import { TextInput } from '../../util/jsx/TextInput';
 import { EmailInput } from '../../util/jsx/EmailInput';
 import { PasswordInput } from '../../util/jsx/PasswordInput';
 import { SelectInput } from '../../util/jsx/SelectInput';
+import { SubmitButton } from '../../util/jsx/SubmitButton';
+import { OAuthButtons } from '../../util/jsx/OAuthButtons';
 
 import teamImage from '../assets/team-meeting.jpg';
 
@@ -106,15 +108,13 @@ const RegisterForm = () => {
         </div>
 
         {/* Bottom Submit & OAuth */}
-        <div className={styles.stickyBottom}>
-          <button type="submit" className={styles.button} onClick={handleSubmit}>
+         <div className={styles.stickyBottom}>
+          <SubmitButton onClick={handleSubmit} fullWidth>
             Submit
-          </button>
+          </SubmitButton>
 
-          <div className={styles.oauth}>
-            <button>Sign in with Apple</button>
-            <button>Sign in with Google</button>
-          </div>
+              
+           <OAuthButtons />
 
           <div className={styles.footer}>
             Already have an account? <a href="#">Sign in</a> | <a href="#">Terms & Conditions</a>

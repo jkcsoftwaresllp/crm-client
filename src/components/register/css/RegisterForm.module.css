@@ -26,13 +26,13 @@
 }
 
 .logo {
-  font-size: var(--text-md);
+  font-size: var(--text-lg);
   font-weight: var(--text-bold);
   color: var(--primary-green);
   background-color: var(--surface-white);
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius-lg);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.10);
   width: fit-content;
 }
 
