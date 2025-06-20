@@ -217,6 +217,192 @@
   background-color: #ffcdd2;
 }
 
+.submitButton {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  font-size: var(--text-sm);
+  font-weight: var(--text-bold);
+  color: var(--text-light);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(38, 119, 92, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.submitButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(38, 119, 92, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.submitButton:hover:not(:disabled)::before {
+  left: 100%;
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(38, 119, 92, 0.2);
+}
+
+.primary {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+}
+
+.primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--hover-green) 0%, var(--primary-green-dark) 100%);
+}
+
+.secondary {
+  background: var(--background-white);
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+  box-shadow: 0 2px 8px rgba(38, 119, 92, 0.1);
+}
+
+.secondary:hover:not(:disabled) {
+  background: var(--tint-green);
+  border-color: var(--hover-green);
+  color: var(--hover-green);
+}
+
+.blue {
+  background: linear-gradient(135deg, rgb(36, 96, 191) 0%, rgb(84, 125, 192) 100%);
+  color: var(--text-light);
+}
+
+.blue:hover:not(:disabled) {
+  background: linear-gradient(135deg, rgb(22, 59, 117) 0%, rgb(58, 75, 102) 100%);
+}
+
+.orange {
+  background: linear-gradient(135deg, var(--warning) 0%, var(--warning-dark) 100%);
+  color: var(--text-light);
+}
+
+.orange:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--warning-dark) 0%, var(--warning) 100%);
+}
+
+.green {
+  background: linear-gradient(135deg, var(--success) 0%, var(--success-dark) 100%);
+  color: var(--text-light);
+}
+
+.green:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--success-dark) 0%, var(--success) 100%);
+}
+
+.red {
+  background: linear-gradient(135deg, var(--error) 0%, var(--error-dark) 100%);
+  color: var(--text-light);
+}
+
+.red:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--error-dark) 0%, var(--error) 100%);
+}
+
+.back {
+  background-color: var(--disabled-bg);
+  color: var(--gray-medium);
+}
+
+.backBlue {
+  background-color: var(--info-light);
+}
+
+.backBlue:hover:not(:disabled) {
+  background-color: #bbdefb;
+}
+
+.backOrange {
+  background-color: var(--warning-light);
+}
+
+.backOrange:hover:not(:disabled) {
+  background-color: #ffe0b2;
+}
+
+.backGreen {
+  background-color: var(--success-light);
+}
+
+.backGreen:hover:not(:disabled) {
+  background-color: #c8e6c9;
+}
+
+.backRed {
+  background-color: var(--error-light);
+}
+
+.backRed:hover:not(:disabled) {
+  background-color: #ffcdd2;
+}
+
+.medium {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--text-sm);
+}
+
+.large {
+  padding: 1.375rem 2.5rem;
+  font-size: var(--text-md);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.disabled {
+  background: var(--disabled-bg) !important;
+  color: var(--disabled-text) !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  border: none !important;
+}
+
+.loading {
+  opacity: 0.9;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.buttonContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.loadingSpinner {
+  width: 1.25em;
+  height: 1.25em;
+  border: 2.5px solid rgba(255, 255, 255, 0.3);
+  border-top: 2.5px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 /* @media (prefers-color-scheme: dark) {
   .card {
     background-color: var(--surface-white);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { SubmitButton } from '../../util/jsx/SubmitButton';
 import styles from '../../Register/css/StatusCard.module.css';
 
 export const StatusCard = ({ config, status, handleResendEmail }) => {
@@ -34,45 +35,46 @@ export const StatusCard = ({ config, status, handleResendEmail }) => {
       <p className={styles.description}>{config.description}</p>
       <div className={styles.actions}>
         {config.showResend && (
-          <button
+          <SubmitButton
+            variant={config.color}
+            size="medium"
+            fullWidth={true}
             onClick={handleResendEmail}
-            className={`
-              ${config.color === 'blue' ? styles.buttonBlue : ''}
-              ${config.color === 'orange' ? styles.buttonOrange : ''}
-              ${config.color === 'green' ? styles.buttonGreen : ''}
-              ${config.color === 'red' ? styles.buttonRed : ''}
-              ${styles.actionButton}
-            `}
           >
             Resend Verification Email
-          </button>
+          </SubmitButton>
         )}
         {status === 'approved' && (
-          <button className={`
-            ${config.color === 'green' ? styles.buttonGreen : ''}
-            ${styles.actionButton}
-          `}>
+          <SubmitButton
+            variant="green"
+            size="medium"
+            fullWidth={true}
+          >
             Continue to Dashboard
-          </button>
+          </SubmitButton>
         )}
         {status === 'rejected' && (
-          <button className={`
-            ${config.color === 'red' ? styles.buttonRed : ''}
-            ${styles.actionButton}
-          `}>
+          <SubmitButton
+            variant="red"
+            size="medium"
+            fullWidth={true}
+          >
             Contact Support
-          </button>
+          </SubmitButton>
         )}
-        <button className={`
-         ${styles.backButton}
-         ${config.color === 'blue' ? styles.backBlue : ''}
-         ${config.color === 'orange' ? styles.backOrange : ''}
-         ${config.color === 'green' ? styles.backGreen : ''}
-         ${config.color === 'red' ? styles.backRed : ''}
-         ${styles.actionButton}
-      `}>
-        Back to Home
-      </button>
+        <SubmitButton
+          variant="back"
+          size="medium"
+          fullWidth={true}
+          className={`
+            ${config.color === 'blue' ? styles.backBlue : ''}
+            ${config.color === 'orange' ? styles.backOrange : ''}
+            ${config.color === 'green' ? styles.backGreen : ''}
+            ${config.color === 'red' ? styles.backRed : ''}
+          `}
+        >
+          Back to Home
+        </SubmitButton>
       </div>
     </div>
   );
