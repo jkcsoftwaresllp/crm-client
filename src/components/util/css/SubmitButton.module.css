@@ -1,3 +1,19 @@
+.oauth {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.oauthButton {
+  padding: 0.75rem 2rem;
+  border: 1px solid var(--gray-medium);
+  border-radius: var(--border-radius-lg);
+  background-color: white;
+  cursor: pointer;
+  font-size: var(--text-sm);
+}
+
 .submitButton {
   width: 100%;
   padding: 1.125rem 2rem;
